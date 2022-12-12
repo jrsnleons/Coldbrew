@@ -13,8 +13,6 @@
   background: #34211B;
   align-items: center;
   justify-content: space-between;
-  color: #F6D4BA;
-  font-family: 'Playfair Display', serif;
 }
 
 
@@ -22,14 +20,21 @@
   display: flex;
 }
 
-.header img{
- width: 10%;
- object-fit:cover;
- margin-left: 1rem;
- margin-right: .5rem;
+.Headerlink{
+  font-family: 'Playfair Display', serif;
+  width: 17rem;
+  text-decoration: none;
+  color: #F6D4BA;
 }
 
-.header a{
+.Headerlink img{
+ width: 25%;
+ object-fit:cover;
+ margin-left: 1.5rem;
+ margin-right: .7rem;
+}
+
+.Right a{
   margin: 25px;
   text-decoration: none;
   color: #F6D4BA;
@@ -49,7 +54,7 @@
 
 .text{
   padding: 20px;
-  width: 25rem;
+  width: 30rem;
   margin-right: auto;
   margin-left: auto;
   left: 40rem;
@@ -76,6 +81,8 @@
   color: white;
   transition: all 0.5s ease;
   transform: scale(1);
+  margin-right: 10px;
+  margin-top: -15px;
 }
 
 .first button:hover {
@@ -92,14 +99,14 @@
   height: 40rem;
   background-size:cover;
   background-repeat: no-repeat;
-  text-align: center;
-  color: #F4E0A3;
+  text-align: center; 
   position: relative;
 }
 
 .second h1{
   font-size: 3rem;
   font-family: 'Montserrat', sans-serif;
+  color: #F4E0A3;
 }
 
 .inner{
@@ -178,6 +185,7 @@
 .about h1{
   font-family: 'Montserrat', sans-serif;
   font-size: 40px;
+  color:black;
 }
 
 .about p{
@@ -195,6 +203,7 @@
   transition: all 0.5s ease;
   transform: scale(1);
   font-family: 'Montserrat', sans-serif;
+    color: #5A3E30;
 }
 
 .about button:hover {

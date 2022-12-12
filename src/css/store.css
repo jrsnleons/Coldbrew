@@ -1,0 +1,52 @@
+.Shop{
+    background-color: black;
+}
+
+.ShopHead{
+    background-image: url("https://cdn.discordapp.com/attachments/948962929007525920/1051744253455376414/image.png");
+    height: 25rem;
+    background-size: cover;
+}
+
+.ShopBody{
+    height: 40rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Products{
+    padding: 10px;
+    background-color: #F6D4BA;
+    margin: 10px;
+    width: 20rem;
+    border-radius: 5px;
+}
+
+.Products img{
+    width: 95%;
+    height: 72%;
+    object-fit:cover;
+    margin-top: 3rem;
+  }
+
+  .description{
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+  }
+
+  .description h3{
+    margin: 0;
+  }
+
+  .bottom p{
+    margin: 0;
+  }
+
+  .bottom{
+    padding: 20px;
+    text-align: justify;
+    font-family: 'Lora', serif;
+    color: #5A3E30;
+  }
