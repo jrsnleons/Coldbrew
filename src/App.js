@@ -1,6 +1,8 @@
 import Home from './pages/home';
 import Login from './pages/login';
 import Register from './pages/Register';
+import About from './pages/about';
+import Store from './pages/shop';
 
 
 
@@ -15,6 +17,8 @@ function App() {
         <Route exact path="/" element={<Home/>}/>
         <Route path="/login" element={<Login/>}/>
         <Route path="/register" element={<Register/>}/>
+        <Route path="/about" element={<About/>}/>
+        <Route path="/Store" element={<Store/>}/>
       </Routes>
     </Router>
   );
