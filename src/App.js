@@ -1,21 +1,21 @@
-import Header from './components/header';
-import Footer from './components/footer';
 import Home from './pages/home';
+import Login from './pages/login';
+import Register from './pages/Register';
 
 
 import './App.css';
-
-
-
+import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <Home/>
-      <Footer />
-    </div>
+    <Router>
+      <Routes>
+        <Route exact path="/" element={<Home/>}/>
+        <Route path="/login" element={<Login/>}/>
+        <Route path="/Register" element={<Register/>}/>
+      </Routes>
+    </Router>
   );
 }
 

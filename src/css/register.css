@@ -1,0 +1,53 @@
+
+.registerPage{
+    background-color: black;
+    align-items: center;
+}
+
+
+.registerBody{
+    align-items: center;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    background-color: #8B7469;
+    border-radius: 1rem;
+    width: 40%;
+    margin: auto;
+    margin-top: 3rem;
+}
+
+.label{
+    display: block;
+}
+
+input{
+    display: block;
+    width: 20rem;
+    min-height: 2rem;
+    border: none;
+    background-color: #F6D4BA;
+    padding: 0.3rem;
+}
+
+
+.reg{
+    margin-bottom: 1rem;
+}
+
+.reg-btn{
+    width: 10rem;
+    height: 3rem;
+    border-radius: 1rem;
+    border: 2px black ;
+}
+
+
+h1{
+    padding: 0.5rem;
+}
+
+.longinput{
+    text-align: left;
+}
