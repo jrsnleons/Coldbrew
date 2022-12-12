@@ -44,7 +44,6 @@ app.post("/register", async (req, res)=>{
         const user_email = req.body.user_email;
         const user_address = req.body.user_address;
         const user_password = await bcrypt.hash(req.body.user_password, 10);
-        console.log(user_fname);
 
         db.query("SELECT * FROM `customer` WHERE email =?",
         [user_email],
@@ -71,18 +70,65 @@ app.post("/register", async (req, res)=>{
     }
 });
 
+app.get("/login", (req, res) => {
+    if (req.session.user){
+        res.send({
+            loggedIn: true,
+            user: req.session.user,
+        });
+    }else{
+        res.send({loggedIn: false});
+    }
+});
 
+//login code
+app.post("/login", async (req, res) => {
+    try{
+        const user_email = req.body.user_email;
 
+        db.query("SELECT * FROM `customer` WHERE email = ?", 
+            [user_email], 
+            (err, result) => {
+                if(err) {
+                    console.log("Email does not exists");
+                    console.log("error in sql query");
+                    res.send({err: err});
+                }
+                if(result.length > 0){
+                    console.log(result);
+                    const user = JSON.parse(JSON.stringify(result));
+                    try{
+                        if(bcrypt.compareSync(req.body.user_password, user[0].password)){   
+                            req.session.user = result;
+                            console.log(req.session.user);        
+                            res.send(result);
+                            console.log('login success');
+                        }else{
+                            res.send({message: 'Wrong Password!'});
+                            console.log('Wrong password!');
+                        }
+                    }catch{
+                        console.log("error in compare")
+                    }
 
+                }else{
+                    res.send({message: "Email has not been registered!"});
+                    console.log("Email does not exist");
+                }
 
+            }
+        );
+    } catch{
 
-
-
-app.use(express.json());
-
-app.get("/", (req, res)=>{
-    res.json("hello this is the backend");
+    }
 })
+
+
+
+
+
+
+
 
 app.listen(3002, ()=>{
     console.log("Connected to backend!")
