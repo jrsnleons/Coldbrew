@@ -12,10 +12,23 @@ const Header = () =>{
     useEffect(()=>{
         Axios.get("http://localhost:3002/login").then((response) =>{
             console.log(response);
-            if(response.data.loggedIn === true)
-            setUser(response.data.user[0].Fname);
+            if(response.data.loggedIn === true){
+                setUser(response.data.user[0].Fname);
+            }else{
+                setUser('User');
+            }
+
         })
     }, [])
+
+    const toProfile = (() => {
+        if(user === 'User'){
+            return "/login";
+        }else{
+            return "/about";
+        }
+    })
+
 
     return(
             <header>
@@ -27,10 +40,10 @@ const Header = () =>{
                     </div>
                     </a>
                     <div className='Right'>
-                        <a href=''>About</a>
+                        <a href='/about'>About</a>
                         <a href='/store'>Store</a>
-                        <a href='#'>Cart</a>
-                        <a href='#'>{user}</a>
+                        <a href='/cart'>Cart</a>
+                        <Link to={toProfile()}>{user}</Link>
                     </div>
                 </div>
             </header>

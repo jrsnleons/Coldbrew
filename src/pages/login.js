@@ -1,13 +1,11 @@
 import Axios from 'axios';
 import { useEffect, useState } from 'react';
-
+import { useNavigate, Link } from 'react-router-dom';
 
 import Footer from '../components/footer';
 import Header from '../components/header';
 
 import '../css/login.css'
-
-
 
 function Login() {
 
@@ -17,6 +15,9 @@ function Login() {
   const [loginStatus, setloginStatus] = useState('');
 
   Axios.defaults.withCredentials = true;
+
+  const navigate = useNavigate();
+  
 
   const login = () => {
     Axios.post("http://localhost:3002/login", {
@@ -34,13 +35,16 @@ function Login() {
     });
   };
 
+
   useEffect(()=>{
     Axios.get("http://localhost:3002/login").then((response) =>{
       console.log(response);
-      if(response.data.loggedIn === true)
-        setloginStatus(response.data.user[0].Fname);
+      if(response.data.loggedIn === true){
+        setloginStatus('Success');
+        navigate('/');
+      }
     })
-  }, [])
+  }, [navigate])
 
   return (
     <div className="loginPage">
@@ -71,6 +75,7 @@ function Login() {
           />
           </div>
         </div>
+        <p>Don't have an account? <Link to="/register">Register</Link></p>
         <button onClick={login}>Login</button>
       </form>
 

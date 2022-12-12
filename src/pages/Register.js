@@ -98,7 +98,7 @@ function Register() {
               />
             </div>
           </div>
-          <p>Have an account? <Link to="/about">Login</Link></p>
+          <p>Have an account? <Link to="/login">Login</Link></p>
           <button className='reg-btn' onClick={formFilled? register : null}>Register</button>
         </form>
       </div>
