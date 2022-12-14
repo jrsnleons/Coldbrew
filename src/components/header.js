@@ -9,6 +9,8 @@ const Header = () =>{
 
     const [user, setUser] =  useState('');
 
+    Axios.defaults.withCredentials = true;
+
     useEffect(()=>{
         Axios.get("http://localhost:3002/login").then((response) =>{
             console.log(response);
@@ -29,7 +31,6 @@ const Header = () =>{
         }
     })
 
-
     return(
             <header>
                 <div className='header'>
@@ -40,9 +41,9 @@ const Header = () =>{
                     </div>
                     </a>
                     <div className='Right'>
-                        <a href='/about'>About</a>
-                        <a href='/store'>Store</a>
-                        <a href='/cart'>Cart</a>
+                        <Link to="/about">About</Link>
+                        <Link to="/store">Store</Link>
+                        <Link to="/cart">Cart</Link>
                         <Link to={toProfile()}>{user}</Link>
                     </div>
                 </div>

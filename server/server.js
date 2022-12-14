@@ -38,6 +38,7 @@ const db = mysql.createConnection({
     database: "coldbrew"
 })
 
+//register 
 app.post("/register", async (req, res)=>{
     try{
         const user_fname = req.body.user_fname;
@@ -122,9 +123,6 @@ app.post("/login", async (req, res) => {
 
     }
 })
-
-
-
 
 
 
