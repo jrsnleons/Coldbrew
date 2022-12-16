@@ -126,6 +126,16 @@ app.post("/login", async (req, res) => {
 
 
 
+//shop
+
+app.get("/shop", (req,res) => {
+    db.query("SELECT * FROM products", 
+        (err, result) => {
+            res.send(result);
+        }
+    );
+})
+
 
 
 app.listen(3002, ()=>{

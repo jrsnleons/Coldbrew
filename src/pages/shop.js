@@ -1,12 +1,24 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
-
+import Axios from 'axios';
 import Footer from '../components/footer';
 import Header from '../components/header';
+
 
 import '../css/store.css'
 
 function Store(){
+
+    var prod;
+
+
+    useEffect(()=>{
+        Axios.get("http://localhost:3002/shop").then((res)=>{
+            prod = res.data;    
+        })
+    })
+
+
 
     return(
     <div className="Shop">
