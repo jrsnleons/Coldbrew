@@ -42,7 +42,7 @@ const Header = () =>{
                     </a>
                     <div className='Right'>
                         <Link to="/about">About</Link>
-                        <Link to="/store">Store</Link>
+                        <Link to="/shop">Store</Link>
                         <Link to="/cart">Cart</Link>
                         <Link to={toProfile()}>{user}</Link>
                     </div>
