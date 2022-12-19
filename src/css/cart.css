@@ -97,7 +97,6 @@
 .Container  ::-webkit-scrollbar-thumb {
     background: #34211B; 
     border-radius: 5px;
-
   }
   
 .Container  ::-webkit-scrollbar-thumb:hover {
