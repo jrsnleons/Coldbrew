@@ -15,7 +15,7 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route exact path="/" element={<Home/>}/>
+        <Route exact path="/home" element={<Home/>}/>
         <Route path="/login" element={<Login/>}/>
         <Route path="/register" element={<Register/>}/>
         <Route path="/about" element={<About/>}/>
