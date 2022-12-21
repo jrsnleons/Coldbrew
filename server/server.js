@@ -26,7 +26,7 @@ app.use(session({
     resave: false,
     saveUninitialized: false,
     cookie: {
-        expires: 60 * 60 * 60 * 24,
+        expires: 60 * 60 * 60 * 60 * 24,
     },
 }))
 
@@ -127,7 +127,6 @@ app.post("/login", async (req, res) => {
 
 
 //shop
-
 app.get("/shop", (req,res) => {
     db.query("SELECT * FROM products", 
         (err, result) => {
@@ -135,6 +134,68 @@ app.get("/shop", (req,res) => {
         }
     );
 })
+
+
+function getDateToday(){
+    let today = new Date();
+
+    let month = today.getMonth() + 1;
+    let year = today.getFullYear();
+    let date = today.getDate();
+    let current_date = `${year}-${month}-${date}`;
+    return current_date;
+}
+
+
+//addtocart
+app.post("/addcart", (req, res) => {
+    const date = getDateToday();
+    console.log(date);
+
+    const user_id = req.body.user_id
+    const prod_id = req.body.prod_id;
+    const quantity = req.body.quantity;
+
+    
+    db.query("INSERT INTO `orders` (productID, customerID, date, quantity) VALUES(?, ?, ?, ?)",
+        [prod_id, user_id, date, quantity],
+        (err, result) => {
+            if(err){
+                res.send(err);
+                console.log(err);
+            }else{
+                res.send("Successfuly added to Cart");
+                console.log("order added to cart");
+            }
+        }
+    )
+});
+
+//cart
+app.post("/cart", (req, res) => {
+
+    const user_id = req.body.user_id;
+
+    db.query("SELECT o.id, p.name, o.quantity, p.price FROM `orders` o, `products` p WHERE p.id = o.productID AND o.customerID = ? ",
+    [user_id],
+    (err, result) => {
+        if(err){
+            res.send(err);
+            console.log(err);
+        }else{
+            
+            db.query("SELECT SUM(p.price) as sum FROM `products` p,  `orders` o WHERE p.id = o.productID AND o.customerID = ?;",
+            [user_id],
+            (err2,res2) =>{
+                res.send({result, res2});
+                console.log({result, res2});
+            })  
+
+        }
+    }
+    )
+});
+
 
 
 
