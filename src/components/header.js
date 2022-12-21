@@ -34,7 +34,7 @@ const Header = () =>{
     return(
             <header>
                 <div className='header'>
-                    <a href='/' className='Headerlink'>
+                    <a href='/home' className='Headerlink'>
                     <div className="left">
                     <img src="./logo.png" alt=""></img>
                     <h2>COLD BREW</h2>
