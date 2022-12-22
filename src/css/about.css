@@ -1,0 +1,38 @@
+.About {
+    background-color: black;
+}
+.AboutBack {
+    width: 100%;
+    height: 700px;
+    background-image: url(https://media.discordapp.net/attachments/911963382855368745/1055376773581381652/aboutpage_coffee.png);
+    background-size: cover;
+}
+.AboutBody {
+    font-size: 100px;
+    font-family: Montserrat;
+    font-weight: bold;
+    color: #FFF;
+    position: absolute;
+    text-align: center;
+    left: 0;
+    right: 0;
+    bottom: 20rem;
+}
+
+.AboutWords{
+    text-align: center;
+    padding-left: 20rem;
+    padding-right: 20rem;
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+    color: #FFF;
+    font-family: Hind Madurai;
+    font-size: 38px;
+}
+
+.AboutImg{
+    padding-left: 5rem;
+    padding-right: 5rem;
+    padding-bottom: 5rem;
+    justify-content: space-between;
+}
