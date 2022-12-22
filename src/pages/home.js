@@ -43,7 +43,7 @@ const home = () => {
                 <div className="third">
                     <div className="about">
                         <h1>ABOUT US</h1>
-                        <p>Learn about the inspirations and reasons on why we embarked in this coffee journey.</p>
+                        <p>Learn about the inspirations and reasons on why we embarked on this coffee journey.</p>
                         <a href='/about'><button>LEARN MORE</button></a>
                     </div>
                 </div>
