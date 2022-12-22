@@ -50,9 +50,11 @@ function Login() {
     <div className="loginPage">
       <Header/>
       <div className="loginBody">
-      <form>
-        <h1>Login</h1>
-        <h1>{loginStatus}</h1>
+        <h1 className='Login'>Login</h1>
+        <div className="Status">
+        <p>{loginStatus}</p>
+        </div>
+        <form>
         <div className="longinput">
           <label>Email</label>
           <div className="reg">
@@ -76,7 +78,7 @@ function Login() {
           </div>
         </div>
         <p>Don't have an account? <Link to="/register">Register</Link></p>
-        <button onClick={login}>Login</button>
+        <button onClick={login} className='Lbtn'>Login</button>
       </form>
 
       </div>

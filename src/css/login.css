@@ -11,11 +11,18 @@
     display: flex;
     justify-content: center;
     padding: 1rem;
-    background-color: #8B7469;
-    border-radius: 1rem;
-    width: 40%;
+    background-color: #F6D4BA;
+    border-radius: 5px;
+    width: 33rem;
     margin: auto;
     margin-top: 3rem;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+    color: #5A3E30;
+    box-shadow: 10px 10px 0px -1px rgba(90, 62, 48, 0.75);
+    -webkit-box-shadow: 10px 10px 0px -1px rgba(90, 62, 48, 0.75);
+    -moz-box-shadow: 10px 10px 0px -1px rgba(90, 62, 48, 0.75);
+    border: 3px solid #5A3E30;
 }
 
 .label{
@@ -34,6 +41,9 @@ input{
 
 .reg{
     margin-bottom: 1rem;
+    margin-top: 1rem;
+    border: 3px solid #5A3E30;
+    border-radius: 5px;
 }
 
 .reg-btn{
@@ -50,4 +60,31 @@ h1{
 
 .longinput{
     text-align: left;
+}
+
+.Login{
+    font-family: 'Montserrat', sans-serif;
+    color: #5A3E30;
+}
+
+.Lbtn{
+    padding: 12px;
+    font-size: 20px;
+    border-radius: 5px;
+    width: 9rem;
+    cursor: pointer;
+    background-color: #5A3E30;
+    color: #F6D4BA;
+    border: 0;
+    margin-top: 2rem;
+}
+
+.Lbtn:hover{
+    background-color: #725749;
+}
+
+.Status{
+    margin-bottom: 2rem;
+    height: 2rem;
+    width: 33rem;
 }

@@ -44,7 +44,7 @@ function Register() {
       <Header/>
       <div className="registerBody">
         <form>
-          <h1>Register</h1>
+          <h1 className='Register'>Register</h1>
           <h1>{regStatus}</h1>
           <div className="longinput">
             <label>First Name</label>

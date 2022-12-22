@@ -15,7 +15,7 @@ const home = () => {
                 <div className="first">
                     <div className="text">
                         <h1>From bean to cup, we pour our heart into every brew.</h1>
-                        <button>SHOP NOW</button>
+                        <a href='/shop'><button>SHOP NOW</button></a>
                     </div>
                 </div>
                 <div className="second background-tint">

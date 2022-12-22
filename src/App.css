@@ -70,7 +70,7 @@
 .text h1{
   font-style: normal;
   font-weight: 700;
-  font-size: 64px;
+  font-size: 55px;
   line-height: 78px;
   text-align: right;
 }
@@ -217,7 +217,7 @@
 
 
 .footer{
-  height: 15rem;
+  height: 20rem;
   margin-top: 3rem;
   background-color: #5A3E30;
   display: flex;
@@ -225,14 +225,6 @@
   padding-right: 10rem;
 }
 
-.footer{
-  height: 20rem;
-  margin-top: 3rem;
-  background-color: #5A3E30;
-  display: flex;
-  justify-content: space-between;
-  padding-right: 22rem;
-}
 
 h1{
   color: white;

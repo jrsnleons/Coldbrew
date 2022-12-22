@@ -34,5 +34,12 @@
     padding-left: 5rem;
     padding-right: 5rem;
     padding-bottom: 5rem;
-    justify-content: space-between;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.AboutImg img{
+    width: 33rem;
+    object-fit: contain;
 }
