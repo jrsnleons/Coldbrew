@@ -42,10 +42,14 @@
   font-family: 'Lora', serif;
 }
 
+.homePage {
+  background-color: black;
+}
+
 .first{
   background-image: url("https://cdn.discordapp.com/attachments/948962929007525920/1051039364534251530/image.png");
   width: 100%;
-  height: 40rem;
+  height: 60rem;
   background-size:cover;
   background-repeat: no-repeat;
   color: white;
@@ -96,7 +100,7 @@
   ), url("https://i0.wp.com/www.templatescatalog.com/wp-content/uploads/2020/08/Coffee-beans-wallpaper.jpg?fit=1600%2C1067&ssl=1");
   margin-top:3rem;
   width: 100%;
-  height: 40rem;
+  height: 39.90rem;
   background-size:cover;
   background-repeat: no-repeat;
   text-align: center; 
@@ -166,7 +170,7 @@
   background-image: url("https://cdn.discordapp.com/attachments/948962929007525920/1051105929371852840/image.png");
   margin-top: 3rem;
   width: 100%;
-  height: 30rem;
+  height: 40rem;
   background-size:cover;
   display: flex;
   align-items: center;

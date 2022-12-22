@@ -14,7 +14,7 @@ const home = () => {
             <div className='home'>
                 <div className="first">
                     <div className="text">
-                        <h1>COLD BREW TAGLINE</h1>
+                        <h1>From bean to cup, we pour our heart into every brew.</h1>
                         <button>SHOP NOW</button>
                     </div>
                 </div>
@@ -43,8 +43,8 @@ const home = () => {
                 <div className="third">
                     <div className="about">
                         <h1>ABOUT US</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur...</p>
-                        <button>LEARN MORE</button>
+                        <p>Learn about the inspirations and reasons on why we embarked in this coffee journey.</p>
+                        <a href='/about'><button>LEARN MORE</button></a>
                     </div>
                 </div>
             </div>
