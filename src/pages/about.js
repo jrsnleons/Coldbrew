@@ -16,10 +16,13 @@ const about = () => {
             </div>
         </div>
         <div className='AboutWords'>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu. Curabitur 
+        Our journey began when we fell in love with the unique flavors and aromas of specialty coffee while traveling abroad. We were inspired to bring these exceptional beans back home and share them with our community.
 
-        pellentesque nibh nibh, at maximus ante fermentum sit amet. Pellentesque commodo lacus at sodales sodales. Quisque sagittis orci ut diam condimentum, vel euismod erat placerat. In iaculis arcu eros, eget tempus orci facilisis id. 
-        <br></br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu. Curabitur pellentesque nibh nibh, at maximus ante fermentum sit amet. Pellentesque commodo lacus at sodales sodales. Quisque sagittis orci ut diam condimentum, vel euismod erat placerat. In iaculis arcu eros, eget tempus orci facilisis id.
+We source our beans directly from small-scale, ethical coffee farms around the world, working with farmers to ensure that they are paid a fair price for their hard work. Our beans are then roasted in small batches by our team of expert roasters, using state-of-the-art equipment to bring out the unique flavors and aromas of each bean.
+<br></br><br></br>
+In our café, we offer a variety of brewing methods, including pour-over, Chemex, French press, cold brew, as well as nitro cold brew on tap.
+
+Thank you for choosing to support our small business and for helping us bring the joy of specialty coffee to our community.
         </div>
         <div className='AboutImg'>
             <img height={550} width={780} src='https://images.pexels.com/photos/1749303/pexels-photo-1749303.jpeg'></img>
