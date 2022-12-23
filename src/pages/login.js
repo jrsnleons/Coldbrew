@@ -41,7 +41,7 @@ function Login() {
       console.log(response);
       if(response.data.loggedIn === true){
         setloginStatus('Success');
-        navigate('/home');
+        navigate('/');
       }
     })
   }, [navigate])

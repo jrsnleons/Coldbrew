@@ -197,7 +197,17 @@ app.post("/cart", (req, res) => {
 });
 
 
+//checkout
+//deletes the rows that have been queried to simulate checkout and remove the items
 
+
+
+
+
+
+
+//profile
+//returns the data of the user
 
 app.listen(3002, ()=>{
     console.log("Connected to backend!")
