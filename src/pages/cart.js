@@ -15,7 +15,6 @@ function Cart() {
   const [userData, setUserData] = useState('');
   const [cartProd, setCartProd] =  useState('');
   const [total, setTotal] = useState('');
-  const [test, setTest] = useState(0);
 
   const navigate = useNavigate();
   
@@ -66,9 +65,7 @@ function Cart() {
       Axios.post("http://localhost:3002/deleteCartItem", {
         order_id: prod_id,
       }).then((res) => {
-        console.log(res);
-        setTest(test+1);
-        console.log(test);
+
       })
     }
   }
