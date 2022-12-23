@@ -57,6 +57,8 @@ const  Shop = () => {
         if(checklogin == false){
             navigate("/login");
         }else{
+            
+            
             Axios.post("http://localhost:3002/addcart", {
                 user_id: usrData.id,
                 prod_id: modal[0].id,
@@ -66,8 +68,6 @@ const  Shop = () => {
             });
         }
     }
-
-
 
     return !prods ? null : (
     <div className="Shop">

@@ -100,8 +100,7 @@ app.post("/login", async (req, res) => {
                     const user = JSON.parse(JSON.stringify(result));
                     try{
                         if(bcrypt.compareSync(req.body.user_password, user[0].password)){   
-                            req.session.user = result;
-                            console.log(req.session.user);        
+                            req.session.user = result;    
                             res.send(result);
                             console.log('login success');
                         }else{

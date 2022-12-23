@@ -2,6 +2,7 @@ import React from 'react'
 import Axios from 'axios';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 import Footer from '../components/footer';
 import Header from '../components/header';
@@ -15,6 +16,7 @@ function Register() {
   const [userAddressReg, setUserAddressReg] = useState('');
   const [passwordReg, setPasswordReg] = useState('');
 
+  const navigate = useNavigate();
 
   Axios.defaults.withCredentials = true;
 
@@ -34,8 +36,9 @@ function Register() {
       }
       console.log(response);
     });
+    navigate("/login");
   };
- 
+
   const formFilled = userfnameReg !== "" && userEmailReg !== "" && userAddressReg !== "" && passwordReg !== "";
 
 
