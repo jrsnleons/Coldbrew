@@ -39,6 +39,24 @@ function Cart() {
   
 
 
+  //checkout btn function
+  function checkOut(){
+    // eslint-disable-next-line no-restricted-globals
+    let checkoutconfirm = confirm("You are about to check out your cart. Proceed?");
+
+    if(checkoutconfirm){
+      // eslint-disable-next-line no-restricted-globals
+      location.reload();
+      Axios.post("http://localhost:3002/checkout", {
+        user_id: userData.id,
+      }).then((res) => {
+        console.log(res);
+      }) 
+      
+    }else{
+      
+    }
+  }
 
   return !cartProd ? null : ( 
     <div className='Cart'>
@@ -69,7 +87,7 @@ function Cart() {
           </div>
           <div className="Cbottom">
             <h1>TOTAL: {total}.00</h1>
-            <button className='Cbtn'>CHECK OUT</button>
+            <button className='Cbtn' onClick={checkOut}>CHECK OUT</button>
           </div>
         </div>
       </div>

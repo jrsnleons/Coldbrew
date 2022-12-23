@@ -184,11 +184,10 @@ app.post("/cart", (req, res) => {
             console.log(err);
         }else{
             
-            db.query("SELECT SUM(p.price) as sum FROM `products` p,  `orders` o WHERE p.id = o.productID AND o.customerID = ?;",
+            db.query("SELECT SUM(p.price * o.quantity) as sum FROM `products` p,  `orders` o WHERE p.id = o.productID AND o.customerID = ?;",
             [user_id],
             (err2,res2) =>{
                 res.send({result, res2});
-                console.log({result, res2});
             })  
 
         }
@@ -199,10 +198,19 @@ app.post("/cart", (req, res) => {
 
 //checkout
 //deletes the rows that have been queried to simulate checkout and remove the items
-
-
-
-
+app.post("/checkout", (req, res) => {
+    const user_id = req.body.user_id;
+    db.query("DELETE from `orders` WHERE `customerID` IN (?);",
+    [user_id], 
+    (err, result) => {
+        if(err){
+            res.send(err);
+            console.log(err);
+        }else{
+            console.log("Successfully deleted");
+        }
+    })
+})
 
 
 

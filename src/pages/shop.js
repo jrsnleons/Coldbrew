@@ -96,7 +96,7 @@ const  Shop = () => {
                 <div className="Decoy" onClick={getData}></div>
                 <div className="Modal_body">
                 <div className="Modal_header">
-                    <button className='Close' onClick={()=> {getData(); setCounter(0)}}>x</button>
+                    <button className='Close' onClick={()=> {getData(); setCounter(1)}}>x</button>
                 </div>
                 {modal.map((pop)=>{
                     return(

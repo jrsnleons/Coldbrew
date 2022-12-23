@@ -3,10 +3,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300&display=swap');
 
+
+html{
+  background-color: #000000;
+}
+
+
 .homePage{
- background-color: black;
- position: relative;
- min-height: 100vh;
+  background-color: black;
+  position: relative;
+  min-height: 100vh;
 }
 
 .header{
@@ -30,10 +36,10 @@
 }
 
 .Headerlink img{
- width: 25%;
- object-fit:cover;
- margin-left: 1.5rem;
- margin-right: .7rem;
+  width: 25%;
+  object-fit:cover;
+  margin-left: 1.5rem;
+  margin-right: .7rem;
 }
 
 .Right a{
