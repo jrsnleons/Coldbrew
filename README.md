@@ -15,11 +15,15 @@ Coldbrew is an online shop website where you can buy Coldbrew products and have 
 
 1. Clone the repo
    `git clone https://github.com/jrsnleons/Coldbrew.git .`
-2. Run the Client/the front-end of the website
+2. Install the needed packages
+    `npm install`
+3. Run the Client/the front-end of the website
    `npm start`
-3. Run the Server/back-end of the website
+4. Run the Server/back-end of the website
    `cd server`
    `npm start`
+5. Installing the db
+    import the `coldbrew.sql` into a new db called `coldbrew`
 
 localhost addresses:
 - front-end: http://localhost:3000/ 

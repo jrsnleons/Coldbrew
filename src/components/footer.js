@@ -19,9 +19,9 @@ const Footer = () =>{
                 </div>
                 <div className="Fright">
                     <h1>Follow Us</h1>
-                    <a href="#" className="fa fa-facebook links"></a>
-                    <a href="#" className="fa fa-twitter links"></a>
-                    <a href="#" className="fa fa-instagram links"></a>
+                    <a href="https://www.facebook.com/" className="fa fa-facebook links"> </a>
+                    <a href="https://twitter.com/" className="fa fa-twitter links"> </a>
+                    <a href="https://www.instagram.com/" className="fa fa-instagram links"> </a>
                 </div>
             </div>
         </footer>
