@@ -1,0 +1,80 @@
+.Profile{
+    background-color: black;
+    min-height: 100vh;
+    position: relative;
+}
+
+.ProfileBody{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Card{
+    background-color: #F6D4BA;
+    width: 50rem;
+    padding: 10px;
+    box-shadow: 10px 10px 0px -1px rgba(90, 62, 48, 0.75);
+    -webkit-box-shadow: 10px 10px 0px -1px rgba(90, 62, 48, 0.75);
+    -moz-box-shadow: 10px 10px 0px -1px rgba(90, 62, 48, 0.75);
+    border: 3px solid #5A3E30;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    color: #5A3E30;
+}
+
+.Img{
+    width: 15rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.Details{
+    margin-top: 2rem;
+}
+
+.Name{
+    color: #5A3E30;
+    font-size: 35px;
+}
+
+
+.Line{
+    background-color: #5A3E30;
+    width: 24rem;
+    height: 5px;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 2rem;
+}
+
+.pbtn{
+    all:unset;
+    margin: auto;  
+}
+
+.logout{
+    background-color: #d53a3a;
+    padding: 10px; 
+    width: 8rem;
+    text-align: center;
+    font-size: 22px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-bottom: 2rem;
+    color: black;
+    font-weight: 600;
+}
+
+.logout:hover{
+    background-color: #d34747;
+}
+.edit{
+    font-size: 20px;
+    margin-bottom: 2rem;
+    cursor: pointer;
+}
