@@ -23,12 +23,12 @@ const  Shop = () => {
     }
     
     const minus = () =>{
-        if(counter!=1){
+        if(counter !== 1){
             setCounter(counter-1);
         }
     }
     const plus = () =>{
-        if(counter!=9){
+        if(counter !== 9){
             setCounter(counter+1);
         }
     }
@@ -54,7 +54,7 @@ const  Shop = () => {
 
 
     const addtocart = () => {
-        if(checklogin == false){
+        if(checklogin === false){
             navigate("/login");
         }else{
             // eslint-disable-next-line no-restricted-globals
@@ -65,7 +65,7 @@ const  Shop = () => {
                     prod_id: modal[0].id,
                     quantity: counter,
                 }).then((res) => {
-                    
+
                 });
             }
         }
