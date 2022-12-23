@@ -30,3 +30,6 @@ localhost addresses:
 - back-end: http://localhost:3002/ 
 ## Github Link
 https://github.com/jrsnleons/Coldbrew.git
+
+
+*note we did not do a production build as it has problems with session and cookies
