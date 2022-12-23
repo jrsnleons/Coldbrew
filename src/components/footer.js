@@ -17,7 +17,7 @@ const Footer = () =>{
                     <br></br>
                     <p>69, Dove Street, Casili Consolacion Cebu.</p>
                 </div>
-                <div className="right">
+                <div className="Fright">
                     <h1>Follow Us</h1>
                     <a href="#" className="fa fa-facebook links"></a>
                     <a href="#" className="fa fa-twitter links"></a>

@@ -1,7 +1,12 @@
 
+  
+
 .loginPage{
-    background-color: black;
     align-items: center;
+    background-color: black;
+    min-height: 100vh;
+    position: relative;
+    margin-bottom:0;
 }
 
 
@@ -23,6 +28,7 @@
     -webkit-box-shadow: 10px 10px 0px -1px rgba(90, 62, 48, 0.75);
     -moz-box-shadow: 10px 10px 0px -1px rgba(90, 62, 48, 0.75);
     border: 3px solid #5A3E30;
+
 }
 
 .label{

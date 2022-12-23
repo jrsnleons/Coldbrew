@@ -3,8 +3,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300&display=swap');
 
-.App{
+.homePage{
  background-color: black;
+ position: relative;
+ min-height: 100vh;
 }
 
 .header{
@@ -218,11 +220,15 @@
 
 .footer{
   height: 20rem;
-  margin-top: 3rem;
   background-color: #5A3E30;
   display: flex;
   justify-content: space-between;
-  padding-right: 10rem;
+
+
+  position: absolute;
+  bottom: 0;
+  top: 100%;
+  width: 100%;
 }
 
 
@@ -247,4 +253,8 @@ h1{
   text-align: center;
   padding: 7px 0;
   margin: 4px;
+}
+
+.Fright{
+  margin-right: 3rem;
 }
