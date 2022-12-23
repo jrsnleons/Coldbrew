@@ -17,6 +17,10 @@ function Cart() {
   const [total, setTotal] = useState('');
 
   const navigate = useNavigate();
+
+  const onDelete = (id) => {
+    Axios.delete(`http://localhost:3002/cart/${id}`)
+  }
   
   useEffect(() =>{
     //checks if user is logged in else redirects to log in page
@@ -35,7 +39,7 @@ function Cart() {
       setCartProd(response.data.result);
       setTotal(response.data.res2[0].sum);
     })
-  }, [navigate, userData.id]);
+  }, [navigate, userData.id]); 
   
 
 
@@ -52,6 +56,7 @@ function Cart() {
                   <th>Product</th>
                   <th>Quantity</th>
                   <th>Price</th>
+                  <th></th>
                 </tr>
               </thead>
               <tbody>
@@ -61,6 +66,7 @@ function Cart() {
                       <td>{product.name}</td>
                       <td>{product.quantity}</td>
                       <td>{product.price}</td>
+                      <td><button type='button' onClick={()=>onDelete(product.id)}>x</button></td>
                     </tr>
                   );
                 })}
