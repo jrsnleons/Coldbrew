@@ -137,7 +137,6 @@ app.get("/shop", (req,res) => {
 
 function getDateToday(){
     let today = new Date();
-
     let month = today.getMonth() + 1;
     let year = today.getFullYear();
     let date = today.getDate();
@@ -214,7 +213,27 @@ app.post("/checkout", (req, res) => {
 
 
 //profile
-//returns the data of the user
+app.get("/logout", (req, res) => {
+    res.clearCookie("userId");
+    res.end()
+})
+
+
+//delete a cart item
+app.post("/deleteCartItem", (req, res) => {
+    const order_id = req.body.order_id;
+    db.query("DELETE from `orders` WHERE `id` = ?;",
+    [order_id], 
+    (err, result) => {
+        if(err){
+            res.send(err);
+            console.log(err);
+        }else{
+            console.log("Successfully deleted");
+        }
+    })
+})
+
 
 app.listen(3002, ()=>{
     console.log("Connected to backend!")

@@ -57,15 +57,17 @@ const  Shop = () => {
         if(checklogin == false){
             navigate("/login");
         }else{
-            
-            
-            Axios.post("http://localhost:3002/addcart", {
-                user_id: usrData.id,
-                prod_id: modal[0].id,
-                quantity: counter,
-            }).then((res) => {
-                console.log(res.data);
-            });
+            // eslint-disable-next-line no-restricted-globals
+            let confirmToCart = confirm("Adding the order to cart");
+            if(confirmToCart){
+                Axios.post("http://localhost:3002/addcart", {
+                    user_id: usrData.id,
+                    prod_id: modal[0].id,
+                    quantity: counter,
+                }).then((res) => {
+                    
+                });
+            }
         }
     }
 

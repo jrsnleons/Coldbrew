@@ -4,7 +4,7 @@ import Register from './pages/Register';
 import About from './pages/about';
 import Shop from './pages/shop';
 import Cart from './pages/cart';
-
+import Profile from './pages/profile';
 
 
 import './App.css';

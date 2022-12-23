@@ -36,7 +36,7 @@ const home = () => {
                         </div>
                         <div className="prod p3">
                             <img src="./prod3.png" alt="" />
-                            <h2>Caramel Macchiata</h2>
+                            <h2>Caramel Macchiato</h2>
                         </div>
                     </div>
                 </div>
@@ -49,7 +49,8 @@ const home = () => {
                 </div>
             </div>
             <Footer/>
-        </div>    )
+        </div>
+    )
 };
 
 export default home

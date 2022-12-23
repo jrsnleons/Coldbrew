@@ -13,7 +13,6 @@ const Header = () =>{
 
     useEffect(()=>{
         Axios.get("http://localhost:3002/login").then((response) =>{
-            console.log(response);
             if(response.data.loggedIn === true){
                 setUser(response.data.user[0].Fname);
             }else{
@@ -27,7 +26,7 @@ const Header = () =>{
         if(user === 'User'){
             return "/login";
         }else{
-            return "/about";
+            return "/profile";
         }
     })
 

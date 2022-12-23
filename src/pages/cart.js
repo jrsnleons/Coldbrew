@@ -15,12 +15,9 @@ function Cart() {
   const [userData, setUserData] = useState('');
   const [cartProd, setCartProd] =  useState('');
   const [total, setTotal] = useState('');
+  const [test, setTest] = useState(0);
 
   const navigate = useNavigate();
-
-  const onDelete = (id) => {
-    Axios.delete(`http://localhost:3002/cart/${id}`)
-  }
   
   useEffect(() =>{
     //checks if user is logged in else redirects to log in page
@@ -31,7 +28,6 @@ function Cart() {
         setUserData(response.data.user[0]);
       }
     })
-    console.log(userData.id);
     //gets the list of items in the user's cart
     Axios.post("http://localhost:3002/cart", {
       user_id: userData.id,
@@ -39,28 +35,45 @@ function Cart() {
       setCartProd(response.data.result);
       setTotal(response.data.res2[0].sum);
     })
-  }, [navigate, userData.id]); 
+  }, [navigate, userData.id, checkOut] ); 
   
 
 
   //checkout btn function
-  function checkOut(){
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  function checkOut() {
     // eslint-disable-next-line no-restricted-globals
     let checkoutconfirm = confirm("You are about to check out your cart. Proceed?");
 
     if(checkoutconfirm){
       // eslint-disable-next-line no-restricted-globals
       location.reload();
+
       Axios.post("http://localhost:3002/checkout", {
         user_id: userData.id,
       }).then((res) => {
-        console.log(res);
+
       }) 
-      
-    }else{
-      
     }
   }
+
+
+  function deleteItem(prod_id){
+    // eslint-disable-next-line no-restricted-globals
+    let deleteItemPop = confirm("Delete item?");
+    
+    if(deleteItemPop){
+      Axios.post("http://localhost:3002/deleteCartItem", {
+        order_id: prod_id,
+      }).then((res) => {
+        console.log(res);
+        setTest(test+1);
+        console.log(test);
+      })
+    }
+  }
+
+
 
   return !cartProd ? null : ( 
     <div className='Cart'>
@@ -68,7 +81,7 @@ function Cart() {
       <div className="Cartbody">
         <div className="Container">
           <div className="Ctable">
-            <table class="fixed_header">
+            <table className="fixed_header">
               <thead>
                 <tr>
                   <th>Product</th>
@@ -84,7 +97,7 @@ function Cart() {
                       <td>{product.name}</td>
                       <td>{product.quantity}</td>
                       <td>{product.price}</td>
-                      <td><button type='button' onClick={()=>onDelete(product.id)}>x</button></td>
+                      <td><button type='button' onClick={() => {deleteItem(product.id)}}>x</button></td>
                     </tr>
                   );
                 })}

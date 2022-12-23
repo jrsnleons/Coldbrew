@@ -34,7 +34,6 @@ function Register() {
       }else{
         setregStatus("noice");
       }
-      console.log(response);
     });
     navigate("/login");
   };

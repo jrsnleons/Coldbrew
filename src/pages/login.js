@@ -31,7 +31,6 @@ function Login() {
       }else{
         setloginStatus(response.data[0].userEmail);
       }
-      console.log(response.data);
     });
   };
 
