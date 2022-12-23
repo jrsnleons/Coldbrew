@@ -1,12 +1,21 @@
 .Shop{
       background-color: black;
+      min-height: 100vh;
+      position: relative;
 }
 
 .ShopHead{
     background-image: url("https://cdn.discordapp.com/attachments/948962929007525920/1051744253455376414/image.png");
     height: 25rem;
     background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    font-weight: bold;
+    color: #FFF;
 }
+
 
 .ShopBody{
     height: 40rem;

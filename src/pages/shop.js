@@ -72,7 +72,9 @@ const  Shop = () => {
     return !prods ? null : (
     <div className="Shop">
         <Header/>
-        <div className="ShopHead"></div>
+        <div className="ShopHead">
+            <h1>SHOP</h1>
+        </div>
         <div className="ShopBody">
             {prods.map(product =>{
                 return(
